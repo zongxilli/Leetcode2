@@ -16,9 +16,9 @@ var removeDuplicates = function(nums) {
     for (let i = 0; i < nums.length; i++) {
 
         if (nums[i] != nums[idx]) {
-
-            nums[++idx] = nums[i];
             
+            idx++;
+            nums[idx] = nums[i];
         }
     }
 

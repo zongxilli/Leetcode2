@@ -13,15 +13,15 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function (nums1, m, nums2, n) {
+	
 	let idx = 0;
+
 	for (let i = m; i < m + n; i++) {
-		nums1[i] = nums2[idx];
-        idx++;
+
+		nums1[i] = nums2[idx++];
 	}
 
-	nums1.sort((a, b) => {
-		return a - b;
-	});
+	nums1.sort(function(a, b) {return a - b});
 };
 
 // @lc code=end

@@ -14,8 +14,8 @@ var maxSubArray = function (nums) {
 	let currMax = 0;
 
 	for (let i of nums) {
-		currMax = Math.max(currMax + i, i);
 
+		currMax = Math.max(currMax + i, i);
 		max = Math.max(max, currMax);
 	}
 
