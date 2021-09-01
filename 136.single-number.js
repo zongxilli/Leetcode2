@@ -15,7 +15,7 @@ var singleNumber = function(nums) {
 
     for (let num of nums) {
 
-        result ^= num;
+        result = result ^ num;
     }
 
     return result;
