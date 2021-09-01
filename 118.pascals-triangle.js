@@ -12,23 +12,18 @@
 var generate = function(numRows) {
     
     let result = [];
-    let tempArray;
 
     for (let i = 0; i < numRows; i++) {
 
-        tempArray = new Array(i + 1).fill(1);
+        result[i] = [];
+        result[i][0] = 1;
 
-        if (i > 1) {
+        for (let j = 1; j < i; j++) {
 
-            for (let j = 1; j < i; j++) {
-
-                tempArray[j] = result[i - 1][j - 1] + result[i - 1][j];
-            }
+            result[i][j] = result[i - 1][j - 1] + result[i - 1][j]
         }
 
-
-        result.push(tempArray);
-
+        result[i][i] = 1;
     }
 
     return result;
