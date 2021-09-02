@@ -102,3 +102,39 @@ Math.pow(num, 2); // Return -> num^2
 Math.sqrt(num); // Return -> square root of num
 
 Math.random(); // Return -> a random number between 0 and 1
+
+//----------------------------------------------------------------------
+//=                                  HashTable
+//----------------------------------------------------------------------
+
+//* Map
+let map = new Map();
+
+map.set('Jessie', {
+	phone: '213-555-1234',
+	address: '123 N 1st Ave',
+});
+
+map.has('Jessie'); // true
+
+map.get('Hilary'); // undefined
+
+map.set('Hilary', { phone: '617-555-4321', address: '321 S 2nd St' });
+
+map.get('Jessie'); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+
+map.delete('Raymond'); // false
+
+map.delete('Jessie'); // true
+
+//* Set
+let set = new Set();
+
+set.size
+
+set.add('a');
+
+set.has('a');
+
+set.delete('a');
+
