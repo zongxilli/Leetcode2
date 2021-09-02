@@ -11,13 +11,15 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-	let dic = {};
+	
+	let map = new Map();
 
-	for (var i = 0; i < nums.length; i++) {
-		if (dic[nums[i]] !== undefined) {
-			return [dic[nums[i]], i];
-		} else {
-			dic[target - nums[i]] = i;
+	for (let i = 0; i < nums.length; i++) {
+
+		if (map.has(nums[i])) return [map.get(nums[i]), i];
+
+		else {
+			map.set(target - nums[i], i);
 		}
 	}
 };
