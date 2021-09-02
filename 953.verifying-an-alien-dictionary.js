@@ -11,30 +11,39 @@
  * @return {boolean}
  */
 var isAlienSorted = function (words, order) {
+	
 	for (let i = 0; i < words.length - 1; i++) {
+		
 		if (!compare(words[i], words[i + 1], order)) {
+			
 			return false;
 		}
 	}
+	
 	return true;
 };
 
 function compare(a, b, order) {
+
 	let idx = 0;
 
 	while (idx < a.length && idx < b.length) {
+		
 		if (order.indexOf(a[idx]) < order.indexOf(b[idx])) {
+			
 			return true;
-		} else if (order.indexOf(a[idx]) > order.indexOf(b[idx])) {
+		} 
+		
+		else if (order.indexOf(a[idx]) > order.indexOf(b[idx])) {
+			
 			return false;
 		}
+		
 		idx++;
 	}
 
 	//! 能到这里说明两个前面都一样， 那我要确保长的在后面
-	if (a.length > b.length) {
-		return false;
-	}
+	if (a.length > b.length) return false;
 
 	return true;
 }
