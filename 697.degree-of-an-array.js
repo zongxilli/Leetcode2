@@ -19,19 +19,21 @@ var findShortestSubArray = function(nums) {
 
         let curr = nums[i];
 
+        // Update map for nums[i]
         if (!map.has(curr)) map.set(curr, { firstIdx: i, degree: 1, freq: 1 });
-
         else map.set(curr, { firstIdx: map.get(curr).firstIdx, degree: i - map.get(curr).firstIdx + 1, freq: map.get(curr).freq + 1 });
 
 
         let currFreq = map.get(curr).freq;
 
+        // Update maxFrequency & maxFrequencyNumber
         if (maxFreq < currFreq) {
             
             maxFreq = currFreq
             maxFreqNum = curr;
         }
-
+        // Check if 2 numbers with the same frequency happened ?
+        // Keep the one with lower degree as the requirement
         else if (maxFreq == currFreq && map.get(maxFreqNum).degree > map.get(curr).degree ) maxFreqNum = curr;
     }
 
