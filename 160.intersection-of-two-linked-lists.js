@@ -32,7 +32,7 @@ var getIntersectionNode = function(headA, headB) {
 
         if (set.has(headB)) return headB;
 
-        else headB = headB.next;
+        headB = headB.next;
     }
 
     return null;
