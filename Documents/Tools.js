@@ -22,9 +22,9 @@ a.indexOf('splice'); // Return -> first index of this item
 
 a.lastIndexOf('splice'); // Return -> last index of this item
 
-a.join(); // Return Combine to a single string
+a.join(''); // Return Combine to a single string with '' between each element
 
-a.toString(); // Return -> Convert to a string
+a.toString(); // Return -> Convert to a string with commas
 
 a.slice(1, 3); // Return -> Slice of array
 
