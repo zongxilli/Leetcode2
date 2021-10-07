@@ -36,13 +36,19 @@ const s = 'abcde';
 
 s.charAt(2); // Return -> char at index 2
 
-s.indexOf('c'); // Return -> index of first occurrence of 'c'
+s.indexOf('cd'); // Return -> index of first occurrence of 'cd'
 
 s.lastIndexOf('c'); // Return -> index of last occurrence of 'c'
 
 s.match('bcd'); // Return -> the match index of 'bcd' in 'abcde' which is 1
 
 s.replace('ab', 'aaaa'); // Return -> the new string after replaced 'ab' to 'aaaa'
+
+// Regex  
+// \w (any number)  \s (space)  
+// [^\w\s] (not number, letter, space, symbol...)
+// [^\w\s]|_ (same as ^    +   low dash _)
+s = str.replace(/[^\w\s]|_/g, '');
 
 s.search('cd'); // Return -> index of 'cd' in 'abcde'
 
@@ -110,6 +116,8 @@ Math.random(); // Return -> a random number between 0 and 1
 //* Map
 let map = new Map();
 
+map.size;
+
 map.set('Jessie', {
 	phone: '213-555-1234',
 	address: '123 N 1st Ave',
@@ -127,10 +135,22 @@ map.delete('Raymond'); // false
 
 map.delete('Jessie'); // true
 
+map.clear();
+
+map.forEach(function (value) {
+	// do something here
+});
+
+map.keys();
+
+map.values();
+
+// map.entries();
+
 //* Set
 let set = new Set();
 
-set.size
+set.size;
 
 set.add('a');
 
@@ -138,3 +158,12 @@ set.has('a');
 
 set.delete('a');
 
+set.clear();
+
+set.values(); // Return -> all of the values in set as an array
+
+set.keys();
+
+set.forEach(function (value) {
+	// do something here
+});
