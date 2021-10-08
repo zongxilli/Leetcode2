@@ -160,9 +160,9 @@ set.delete('a');
 
 set.clear();
 
-set.values(); // Return -> all of the values in set as an array
+// set.values(); // Return -> all of the values in set as an array
 
-set.keys();
+// set.keys();
 
 set.forEach(function (value) {
 	// do something here
