@@ -167,3 +167,5 @@ set.clear();
 set.forEach(function (value) {
 	// do something here
 });
+
+Array.from(set)[0] // Get the first key of set
