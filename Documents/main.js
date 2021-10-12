@@ -35,3 +35,11 @@ set.add('kenney');
 set.add('kennedy');
 
 console.log(Array.from(set)[0])
+
+let s1 = 'abc';
+let s2 = 'cba';
+
+let s3 = s1 + s2;
+let s4 = 'abccba';
+
+console.log(s3 === s4)

@@ -28,6 +28,9 @@ a.toString(); // Return -> Convert to a string with commas
 
 a.slice(1, 3); // Return -> Slice of array
 
+const b = ['e', 'f', 'g'];
+a.concat(b); // Return -> Combination of a & b
+
 //----------------------------------------------------------------------
 //=                                String
 //----------------------------------------------------------------------
@@ -44,8 +47,8 @@ s.match('bcd'); // Return -> the match index of 'bcd' in 'abcde' which is 1
 
 s.replace('ab', 'aaaa'); // Return -> the new string after replaced 'ab' to 'aaaa'
 
-// Regex  
-// \w (any number)  \s (space)  
+// Regex
+// \w (any number)  \s (space)
 // [^\w\s] (not number, letter, space, symbol...)
 // [^\w\s]|_ (same as ^    +   low dash _)
 s = str.replace(/[^\w\s]|_/g, '');
@@ -59,6 +62,8 @@ s.substring(1, 3); // Return -> a substring of 'abcde' which is 'bc'
 s.toLowerCase(); // Return -> this string lower case version
 
 s.toUpperCase(); // Return -> this string upper case version
+
+s.split(''); // Return -> string Array version
 
 //----------------------------------------------------------------------
 //=                              Numbers & Math
@@ -168,4 +173,4 @@ set.forEach(function (value) {
 	// do something here
 });
 
-Array.from(set)[0] // Get the first key of set
+Array.from(set)[0]; // Get the first key of set
