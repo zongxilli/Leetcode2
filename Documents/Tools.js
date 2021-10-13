@@ -3,6 +3,7 @@
 //----------------------------------------------------------------------
 
 const a = ['a', 'b', 'c', 'd']; // 4*4 = 16 bytes of storage
+const b = ['e', 'f', 'g']; // 3*4 = 12 bytes of storage
 
 a.push('push'); // O(1)  Add -> to the end
 
@@ -28,7 +29,6 @@ a.toString(); // Return -> Convert to a string with commas
 
 a.slice(1, 3); // Return -> Slice of array
 
-const b = ['e', 'f', 'g'];
 a.concat(b); // Return -> Combination of a & b
 
 //----------------------------------------------------------------------
@@ -56,8 +56,10 @@ s = str.replace(/[^\w\s]|_/g, '');
 s.search('cd'); // Return -> index of 'cd' in 'abcde'
 
 s.slice(1, 3); // Return -> a slice of 'abcde' which is 'bc'
+s.slice(1);
 
 s.substring(1, 3); // Return -> a substring of 'abcde' which is 'bc'
+s.substring(1);
 
 s.toLowerCase(); // Return -> this string lower case version
 
