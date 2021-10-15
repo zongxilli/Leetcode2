@@ -39,7 +39,6 @@ const arrangeInAlphaOrder = async (filePath) => {
 	// Generate an SortedShortStory.txt in your folder => so you can check my work
 	fs.writeFileSync('./Documents/Codings/SortedShortStory.txt', sortedFile);
 
-	// In case it above is not working, console log it out to check my work
 	// console.log(sortedFile);
 };
 
