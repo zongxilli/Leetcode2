@@ -176,3 +176,26 @@ set.forEach(function (value) {
 });
 
 Array.from(set)[0]; // Get the first key of set
+
+
+//----------------------------------------------------------------------
+//=                                  NodeList
+//----------------------------------------------------------------------
+
+let head = new NodeList();
+
+head.val = 1;
+
+let head2 = new NodeList(2);
+
+head.next = head2; // 1 -> 2
+
+//----------------------------------------------------------------------
+//=                                  Stack
+//----------------------------------------------------------------------
+
+let stack = [];
+
+stack.push(1);
+
+stack.pop(); // return -> last element and remove it from the array	
