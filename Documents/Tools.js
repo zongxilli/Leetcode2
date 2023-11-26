@@ -2,6 +2,9 @@
 //=                                Array
 //----------------------------------------------------------------------
 
+// create a new n * n array
+const result = new Array(n).fill(0).map(() => new Array(n).fill(0));
+
 const a = ['a', 'b', 'c', 'd']; // 4*4 = 16 bytes of storage
 const b = ['e', 'f', 'g']; // 3*4 = 12 bytes of storage
 
