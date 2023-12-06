@@ -7,6 +7,7 @@ const result = new Array(n).fill(0).map(() => new Array(n).fill(0));
 
 const a = ['a', 'b', 'c', 'd']; // 4*4 = 16 bytes of storage
 const b = ['e', 'f', 'g']; // 3*4 = 12 bytes of storage
+const c = ['a', 'b', ['c', 'd'], ['e', 'f', 'g']];
 
 a.push('push'); // O(1)  Add -> to the end
 
@@ -16,8 +17,8 @@ a.shift(); // O(1) Remove -> first one
 
 a.unshift('unshift'); // O(n)  Add -> to the start
 
-a.splice(2, 0, 'splice'); // O(n) Remove < 0 > item(s) -> start from index < 2 >
-//                              & Add -> to index < 2 >
+a.splice(2, 0, 'splice'); // O(n) Remove < 0 > item(s) -> start from index < 2 >, also return removed items as an array
+//                              & Add -> to index < 2 > (optional)
 a.sort(); // Sort -> alphabetically
 
 a.reverse(); // Reverse
@@ -33,6 +34,8 @@ a.toString(); // Return -> Convert to a string with commas
 a.slice(1, 3); // Return -> Slice of array
 
 a.concat(b); // Return -> Combination of a & b
+
+const d = c.flat(); // d = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
 //----------------------------------------------------------------------
 //=                                String
@@ -69,6 +72,12 @@ s.toLowerCase(); // Return -> this string lower case version
 s.toUpperCase(); // Return -> this string upper case version
 
 s.split(''); // Return -> string Array version
+
+s.charCodeAt(0); // Return -> ASCII value of char at index 0 in string 's'
+
+const ASCIIValue = 11;
+
+String.fromCharCode(ASCIIValue); // Return -> char which has corresponding ASCII value
 
 //----------------------------------------------------------------------
 //=                              Numbers & Math
@@ -180,7 +189,6 @@ set.forEach(function (value) {
 
 Array.from(set)[0]; // Get the first key of set
 
-
 //----------------------------------------------------------------------
 //=                                  NodeList
 //----------------------------------------------------------------------
@@ -201,4 +209,4 @@ let stack = [];
 
 stack.push(1);
 
-stack.pop(); // return -> last element and remove it from the array	
+stack.pop(); // return -> last element and remove it from the array
